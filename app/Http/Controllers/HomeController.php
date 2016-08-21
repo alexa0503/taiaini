@@ -20,7 +20,10 @@ class HomeController extends Controller
     {
         $user_id = Session::get('wechat.id');
         App\Lottery::where('user_id', $user_id)->first();
-        return view('index');
+        $count = App\Lottery::where('user_id', $user_id)->count();
+        return view('index',[
+            'count' => $count,
+        ]);
     }
     public function lottery()
     {
@@ -37,7 +40,7 @@ class HomeController extends Controller
         //$prize_code = $lottery->getCode();
         $prize_id = $lottery->getPrizeId();
         $result['prize'] = $prize_id;
-        
+
         //$result['prize']['code'] = $prize_code;
 
         return json_encode($result);

@@ -66,6 +66,9 @@
 @section('scripts')
 <script>
 $(document).ready(function() {
+	@if ($count >= 2)
+	showPage("YWL")
+	@endif
 	//showPage("YWL")
 	$.ajaxSetup({
         headers: {
