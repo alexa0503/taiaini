@@ -134,7 +134,7 @@ class Lottery
         $lottery->created_time = Carbon::now();
         $lottery->created_ip = \Request::getClientIp();
         //记录中奖用户
-        if( $prize_id > 100){
+        if( $prize_id > 0){
             $prize_code_model = \App\PrizeCode::where('is_active', 0)
                 ->where('prize_id', $prize_id)
                 ->sharedLock();
