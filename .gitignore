@@ -1,0 +1,23 @@
+idea/
+Homestead.yaml
+Homestead.json
+
+vendor/
+node_modules/
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+bootstrap/cache/
+storage/
+public/storage
+public/qrcodes
+.env.*.php
+.env.php
+.env
+
+#公司访问目录为public_html
+#public
+#public/

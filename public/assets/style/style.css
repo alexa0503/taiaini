@@ -1,0 +1,47 @@
+
+input{
+	border:none;outline:none;background:none; 
+	color:#a8566f;
+	font-family:helvetica,黑体,微软雅黑;  
+}
+.inputS{
+	color:#a8566f;
+	/*font-size:2.0em;30px;*/
+	font-size:1.8rem;
+	font-family:helvetica,黑体,微软雅黑;  
+}
+.inputX{
+	color:#a8566f;
+	/*font-size:3.2em;40px;*/
+	font-size:2.5rem;
+	font-family:helvetica,黑体,微软雅黑;  
+}
+
+
+.btnClose{
+    -webkit-animation: btnClose 0.4s forwards ease-in-out;
+}
+@-webkit-keyframes  btnClose{ 
+    0% {opacity:1.0;-webkit-transform:rotate(0deg);}
+    100% {opacity:1.0;-webkit-transform:rotate(90deg);}
+}
+
+.panelClose{
+    -webkit-animation: panelClose 0.5s forwards ease-in-out;
+}
+@-webkit-keyframes  panelClose{  
+	0%{opacity:1;-webkit-transform:scale(1);}
+	25%{opacity:1;-webkit-transform:scale(0.95);}
+	50%{opacity:1;-webkit-transform:scale(1.1);}
+	100%{opacity:0;-webkit-transform:scale(0.3);} 
+}
+
+.panelOpen{
+    -webkit-animation: panelOpen 0.8s forwards ease-in;
+}
+@keyframes panelOpen {
+   0% { opacity: 0; -webkit-transform: scale(.3);}
+   50% {opacity: 1;-webkit-transform: scale(1.05);}
+   70% {-webkit-transform: scale(.9);}
+   100% {-webkit-transform: scale(1);}
+} 
