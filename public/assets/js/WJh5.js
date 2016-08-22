@@ -4,12 +4,22 @@
  */
 
 function WJstart() {
-	window.pages = ['home','GZ','YWL','CYDD','share']
+	window.pages = ['home','GZ','YWL','CYDD','WIN','share']
 	all = document.getElementsByTagName('div')
 	console.log(all.length)
 	didnotInitGZ=false
 	//hidePage()
 	showPage(0)
+
+	//new--WIN--CLOSE
+	WJclick('WIN_btnX',function(){
+		hidePage('WIN')
+	})
+	//new--WIN--SHARE
+	WJclick('WIN_btnShare',function(){
+		hidePage('WIN')
+		showPage('share')
+	})
 
 	//活动规则
 	WJclick('home_HuoDongGuiZe',function(){
@@ -94,6 +104,10 @@ function WJstart() {
             success: function(json) {
 				if(json.ret == 1001){
 					showPage("YWL");
+					return;
+				}
+				else if(json.ret == 1002){
+					showPage('WIN');
 					return;
 				}
 				else if (json.ret==0 && json.prize == 1){//中奖

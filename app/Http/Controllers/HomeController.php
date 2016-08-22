@@ -21,15 +21,23 @@ class HomeController extends Controller
         $user_id = Session::get('wechat.id');
         App\Lottery::where('user_id', $user_id)->first();
         $count = App\Lottery::where('user_id', $user_id)->count();
+        $count1 = App\Lottery::where('user_id', $user_id)->where('prize_id','!=','0')->count();
+
         return view('index',[
             'count' => $count,
+            'hasWin' => $count1 > 0 ? true : false,
         ]);
     }
     public function lottery()
     {
         $user_id = Session::get('wechat.id');
-        $count = App\Lottery::where('user_id', $user_id)->count();
-        if($count > 1){
+        $count1 = App\Lottery::where('user_id', $user_id)->count();
+        $count2 = App\Lottery::where('user_id', $user_id)->where('prize_id','!=','0')->count();
+        if($count2 > 0){
+            $result = ['ret' => 1002, 'prize' => null, 'msg' => '已中奖,不能再抽奖了嗷'];
+            return $result;
+        }
+        if($count1 > 1){
             $result = ['ret' => 1001, 'prize' => null, 'msg' => '一个人最多只能抽2次嗷'];
             return $result;
         }

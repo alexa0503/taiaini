@@ -37,6 +37,10 @@
 <div id="FORM_input_name" style="width: 239px; height: 33px; left: 246px; top: 444px;  background-image: url('/assets/images/FORM_input_name.png');"></div>
 <div id="FORM_qrcode" style="width: 134px; height: 133px; left: 120px; top: 737px;  background-image: url('/assets/images/FORM_qrcode.png');"></div>
 <div id="FORM_btnX" style="width: 60px; height: 60px; left: 557px; top: 88px;  background-image: url('/assets/images/FORM_btnX.png');"></div>
+<div id="WIN_layer_13" style="width: 640px; height: 1038px; left: 0px; top: 0px;  background-image: url('/assets/images/WIN_layer_13.png');"></div>
+<div id="WIN_BG" style="width: 529px; height: 333px; left: 57px; top: 396px;  background-image: url('/assets/images/WIN_BG.png');"></div>
+<div id="WIN_btnX" style="width: 60px; height: 60px; left: 554px; top: 369px;  background-image: url('/assets/images/WIN_btnX.png');"></div>
+<div id="WIN_btnShare" style="width: 204px; height: 70px; left: 223px; top: 634px;  background-image: url('/assets/images/WIN_btnShare.png');"></div>
 <div id="share_msk" style="width: 640px; height: 1038px; left: 0px; top: 0px;  background-image: url('/assets/images/share_msk.png');"></div>
 <div id="share_obj_d6" style="width: 79px; height: 79px; left: 198px; top: 464px;  background-image: url('/assets/images/share_obj_d6.png');"></div>
 <div id="share_obj_d6_KaoBei_11" style="width: 79px; height: 79px; left: 311px; top: 325px;  background-image: url('/assets/images/share_obj_d6_KaoBei_11.png');"></div>
@@ -66,8 +70,10 @@
 @section('scripts')
 <script>
 $(document).ready(function() {
-	@if ($count >= 2)
-	showPage("YWL")
+	@if ($hasWin == true)
+	showPage("WIN");
+	@elseif ($count >= 2)
+	showPage("YWL");
 	@endif
 	$.ajaxSetup({
         headers: {
