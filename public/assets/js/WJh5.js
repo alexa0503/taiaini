@@ -192,7 +192,8 @@ function doSubmit()
             success: function(json) {
 				if(json.ret == 0){
 					//alert('提交成功~');
-					showPage("WIN")
+					showPage("WIN");
+					hidePage("FORM");
 					clearInpit();
 				}
 				else{
