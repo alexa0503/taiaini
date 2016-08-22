@@ -151,10 +151,10 @@ function WJstart() {
 
 	//input
 var ui1 = WJget("FORM_input_name");
-ui1.innerHTML +='<input    maxlength="13" autocomplete="off"  id="wjname" class="inputS" style="position:absolute;width: 450px;font-size:2rem; height: 63px; left:10px; top: -15px;"></input>'
+ui1.innerHTML +='<input    maxlength="13" autocomplete="off"  id="wjname" class="inputS" style="position:absolute;width: 250px;font-size:2rem; height: 63px; left:10px; top: -15px;"></input>'
 
 var ui2 = WJget("FORM_input_mobile");
-ui2.innerHTML +='<input   type="tel"  maxlength="11" autocomplete="off"  id="wjmobile" class="inputS" style="position:absolute;width: 450px;font-size:2rem; height: 63px; left:10px; top:-15px;"></input>'
+ui2.innerHTML +='<input   type="tel"  maxlength="11" autocomplete="off"  id="wjmobile" class="inputS" style="position:absolute;width: 250px;font-size:2rem; height: 63px; left:10px; top:-15px;"></input>'
 
 	//showPage("GZ")
 };
