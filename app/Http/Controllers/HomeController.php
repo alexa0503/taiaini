@@ -24,10 +24,10 @@ class HomeController extends Controller
         $count1 = App\Lottery::where('user_id', $user_id)->count();
         $count2 = App\Lottery::where('user_id', $user_id)->where('prize_id','!=','0')->count();
         if($count2 > 0 ){
-            $count3  = App\Info::where('id', $user_id)->count();
+            $lottery = App\Lottery::where('user_id', $user_id)->where('prize_id','!=','0')->first();
+            $count3  = App\Info::where('id', $lottery->id)->count();
             $status = $count3 > 0 ? 2 : 1;
             if($count3 == 0){
-                $lottery = App\Lottery::where('user_id', $user_id)->where('prize_id','!=','0')->first();
                 Session::set('lottery.id', $lottery->id);
             }
         }
