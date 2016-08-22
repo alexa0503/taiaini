@@ -70,7 +70,7 @@ function WJstart() {
 	WJclick('home_DianJiKaiShi1',function(){
 		//showPage(2)
 		WJshow('home_DJKS2_SS')
-
+		window.clickCount++;
 
 		//单元测试
 		//启动
