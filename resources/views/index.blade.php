@@ -35,7 +35,8 @@
 <div id="FORM_submit" style="width: 131px; height: 45px; left: 265px; top: 557px;  background-image: url('/assets/images/FORM_submit.png');"></div>
 <div id="FORM_input_mobile" style="width: 239px; height: 33px; left: 246px; top: 501px;  background-image: url('/assets/images/FORM_input_mobile.png');"></div>
 <div id="FORM_input_name" style="width: 239px; height: 33px; left: 246px; top: 444px;  background-image: url('/assets/images/FORM_input_name.png');"></div>
-<div id="FORM_qrcode" style="width: 134px; height: 133px; left: 120px; top: 737px;  background-image: url('/assets/images/FORM_qrcode.png');"></div>
+<div id="FORM_qrcode" style="width: 134px; height: 133px; left: 120px; top: 737px;  ">
+	<img style="width: 134px; height: 134px; padding:100px;margin:-100px;" src="/assets/images/FORM_qrcode.jpg"></div>
 <div id="FORM_btnX" style="width: 60px; height: 60px; left: 557px; top: 88px;  background-image: url('/assets/images/FORM_btnX.png');"></div>
 <div id="WIN_layer_13" style="width: 640px; height: 1038px; left: 0px; top: 0px;  background-image: url('/assets/images/WIN_layer_13.png');"></div>
 <div id="WIN_BG" style="width: 529px; height: 333px; left: 57px; top: 396px;  background-image: url('/assets/images/WIN_BG.png');"></div>
