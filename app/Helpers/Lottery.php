@@ -65,6 +65,9 @@ class Lottery
         }
 
         //获取中奖几率
+        if($config->win_odds == 0){
+            return;
+        }
         $rand_max = ceil(1/$config->win_odds);
         $rand1 = rand(1,$rand_max);
         $rand2 = rand(1,$rand_max);
