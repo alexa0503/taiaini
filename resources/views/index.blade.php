@@ -70,9 +70,11 @@
 @section('scripts')
 <script>
 $(document).ready(function() {
-	@if ($hasWin == true)
-	showPage("WIN");
-	@elseif ($count >= 2)
+	@if ($status == 1)
+	showPage("FORM");
+	@elseif ($status == 2)
+	showPage("WIN")
+	@elseif ($status == 3)
 	showPage("YWL");
 	@endif
 	$.ajaxSetup({

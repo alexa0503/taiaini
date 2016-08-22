@@ -191,7 +191,8 @@ function doSubmit()
             dataType: 'json',
             success: function(json) {
 				if(json.ret == 0){
-					alert('提交成功~');
+					//alert('提交成功~');
+					showPage("WIN")
 					clearInpit();
 				}
 				else{

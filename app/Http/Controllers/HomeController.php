@@ -20,12 +20,22 @@ class HomeController extends Controller
     {
         $user_id = Session::get('wechat.id');
         App\Lottery::where('user_id', $user_id)->first();
-        $count = App\Lottery::where('user_id', $user_id)->count();
-        $count1 = App\Lottery::where('user_id', $user_id)->where('prize_id','!=','0')->count();
-
+        $status = 0;
+        $count1 = App\Lottery::where('user_id', $user_id)->count();
+        $count2 = App\Lottery::where('user_id', $user_id)->where('prize_id','!=','0')->count();
+        if($count2 > 0 ){
+            $count3  = App\Info::where('id', $user_id)->count();
+            $status = $count3 > 0 ? 2 : 1;
+            if($count3 == 0){
+                $lottery = App\Lottery::where('user_id', $user_id)->where('prize_id','!=','0')->first();
+                Session::set('lottery.id', $lottery->id);
+            }
+        }
+        elseif($count1 > 1){
+            $status = 3;
+        }
         return view('index',[
-            'count' => $count,
-            'hasWin' => $count1 > 0 ? true : false,
+            'status' => $status,
         ]);
     }
     public function lottery()
@@ -55,14 +65,19 @@ class HomeController extends Controller
     }
     public function info(Request $request)
     {
+        $user_id = Session::get('wechat.id');
         if( null == Session::get('lottery.id')){
             return ['ret'=>1001,'msg'=>'您还没有抽奖呢'];
         }
         else{
             $lottery = App\Lottery::findOrFail(Session::get('lottery.id'));
             $count = App\Info::where('mobile',trim($request->input('mobile')))->count();
+            $count1 = App\Info::where('id',$user_id)->count();
             if( $lottery->prize_id == null){
                 return ['ret'=>1002,'msg'=>'你还没有中奖呢'];
+            }
+            elseif($count1 > 0){
+                return ['ret'=>1004,'msg'=>'您已经填写过表单了~'];
             }
             elseif($count>0){
                 return ['ret'=>1003,'msg'=>'该手机号已经使用过了~'];
