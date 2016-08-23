@@ -1,24 +1,23 @@
 @extends('layouts.app')
 @section('content')
-
-<div id="home_BG" style=" left: 0px; top: 0px;  "><img style="width: 640px; height: 1038px;" src="/assets/images/home_BG.png"/></div>
+<div id="home_bg" style=" left: 0px; top: 0px;  "><img style="width: 640px; height: 1038px;" src="/assets/images/home_bg.png"/></div>
 <div id="home_ge9" style=" left: 439px; top: 824px;  "><img style="width: 166px; height: 166px;" src="/assets/images/home_ge9.png"/></div>
 <div id="home_ge8" style=" left: 243px; top: 824px;  "><img style="width: 166px; height: 166px;" src="/assets/images/home_ge8.png"/></div>
 <div id="home_ge7" style=" left: 44px; top: 824px;  "><img style="width: 165px; height: 166px;" src="/assets/images/home_ge7.png"/></div>
 <div id="home_ge6" style=" left: 439px; top: 629px;  "><img style="width: 166px; height: 166px;" src="/assets/images/home_ge6.png"/></div>
-<div id="home_ge4" style=" left: 44px; top: 629px;  "><img style="width: 165px; height: 166px;" src="/assets/images/home_ge4.png"/></div>
 <div id="home_ge3" style=" left: 439px; top: 436px;  "><img style="width: 166px; height: 166px;" src="/assets/images/home_ge3.png"/></div>
+<div id="home_ge4" style=" left: 44px; top: 629px;  "><img style="width: 165px; height: 166px;" src="/assets/images/home_ge4.png"/></div>
 <div id="home_ge2" style=" left: 243px; top: 436px;  "><img style="width: 166px; height: 166px;" src="/assets/images/home_ge2.png"/></div>
 <div id="home_ge1" style=" left: 44px; top: 436px;  "><img style="width: 165px; height: 166px;" src="/assets/images/home_ge1.png"/></div>
 <div id="home_DianJiKaiShi1" style=" left: 231px; top: 613px;  "><img style="width: 192px; height: 197px;" src="/assets/images/home_DianJiKaiShi1.png"/></div>
 <div id="home_DJKS2_SS" style=" left: 231px; top: 613px;  "><img style="width: 192px; height: 197px;" src="/assets/images/home_DJKS2_SS.png"/></div>
-<div id="home_HuoDongGuiZe" style=" left: 254px; top: 305px;  "><img style="width: 149px; height: 51px;" src="/assets/images/home_HuoDongGuiZe.png"/></div>
-<div id="home_WoYaoFenXiang" style=" left: 408px; top: 305px;  "><img style="width: 150px; height: 51px;" src="/assets/images/home_WoYaoFenXiang.png"/></div>
+<div id="home_HuoDongGuiZe" style=" left: 254px; top: 305px;  "><img style="width: 144px; height: 44px;" src="/assets/images/home_HuoDongGuiZe.png"/></div>
+<div id="home_WoYaoFenXiang" style=" left: 408px; top: 305px;  "><img style="width: 144px; height: 44px;" src="/assets/images/home_WoYaoFenXiang.png"/></div>
 <div id="home_XuanKuang" style=" left: 44px; top: 436px;  "><img style="width: 165px; height: 166px;" src="/assets/images/home_XuanKuang.png"/></div>
 <div id="GZ_layer_13" style=" left: 0px; top: 0px;  "><img style="width: 640px; height: 1038px;" src="/assets/images/GZ_layer_13.png"/></div>
 <div id="GZ_DCBJ" style=" left: 63px; top: 114px;  "><img style="width: 529px; height: 809px;" src="/assets/images/GZ_DCBJ.png"/></div>
 <div id="GZ_WenZi" style="width: 460px; height: 766px;  left: 106px; top: 143px; ">
-<img id="myScrollbar" style="width: 439px; height: 1200px; " src='/assets/images/GZ.png'/>
+<img id="myScrollbar" style="width: 438px; height: 1061px; " src='/assets/images/GZ.png'/>
 </div>
 <div id="GZ_btnX" style=" left: 557px; top: 88px;  "><img style="width: 60px; height: 60px;" src="/assets/images/GZ_btnX.png"/></div>
 <div id="YWL_layer_13" style=" left: 0px; top: 0px;  "><img style="width: 640px; height: 1038px;" src="/assets/images/YWL_layer_13.png"/></div>
@@ -64,7 +63,6 @@
 <div id="share_obj_layer_18_KB_4" style=" left: 481px; top: 326px;  "><img style="width: 35px; height: 36px;" src="/assets/images/share_obj_layer_18_KB_4.png"/></div>
 <div id="share_obj_layer_18_KB_5" style=" left: 431px; top: 344px;  "><img style="width: 21px; height: 22px;" src="/assets/images/share_obj_layer_18_KB_5.png"/></div>
 <div id="share_obj_layer_18_KB_6" style=" left: 520px; top: 173px;  "><img style="width: 21px; height: 22px;" src="/assets/images/share_obj_layer_18_KB_6.png"/></div>
-
 <script src="/assets/js/WJpreloader.js"></script>
 {{ csrf_field() }}
 @endsection
