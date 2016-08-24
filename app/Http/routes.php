@@ -16,7 +16,7 @@ Route::get('/wx/share', function(){
     $share = [
       'title' => env('WECHAT_SHARE_TITLE'),
       'desc' => env('WECHAT_SHARE_DESC'),
-      'link' => env('APP_URL'),
+      'link' => 'http://mp.weixin.qq.com/s?__biz=MzI1MTI5MDg4OA==&mid=100000405&idx=1&sn=255f42c249e47766104a19258371786b&scene=1&srcid=0824HZCaXI8qQI7tSSNzsHlo&from=singlemessage&isappinstalled=0#wechat_redirect',
       'imgUrl' => asset(env('WECHAT_SHARE_IMG')),
     ];
     return json_encode(array_merge($share, $config));
