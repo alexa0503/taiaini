@@ -72,14 +72,14 @@ class HomeController extends Controller
         else{
             $lottery = App\Lottery::findOrFail(Session::get('lottery.id'));
             $count = App\Info::where('mobile',trim($request->input('mobile')))->count();
-            $count1 = App\Info::where('id',$user_id)->count();
+            $count1 = App\Info::where('id',Session::get('lottery.id'))->count();
             if( $lottery->prize_id == null){
                 return ['ret'=>1002,'msg'=>'你还没有中奖呢'];
             }
             elseif($count1 > 0){
                 return ['ret'=>1004,'msg'=>'您已经填写过表单了~'];
             }
-            elseif($count>0){
+            elseif($count > 0 ){
                 return ['ret'=>1003,'msg'=>'该手机号已经使用过了~'];
             }
             else{

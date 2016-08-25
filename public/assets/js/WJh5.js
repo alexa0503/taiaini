@@ -201,6 +201,7 @@ function doSubmit()
 				}
             },
             error: function() {
+				alert('提交失败，请重试~');
             }
         })
 	}

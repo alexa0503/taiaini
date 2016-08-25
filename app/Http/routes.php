@@ -26,8 +26,10 @@ Route::get('logout',function(){
     return redirect('/');
 });
 Route::get('login',function(){
-    Request::session()->set('wechat.openid','o2-sBj0oOQJCIq6yR7I9HtrqxZcY');
-    Request::session()->set('wechat.id','1');
+    //Request::session()->set('wechat.openid','o2-sBj0oOQJCIq6yR7I9HtrqxZcY');
+    //Request::session()->set('wechat.id','1');
+    Request::session()->set('wechat.openid','oCMPKwaZYDpcla9hSY-9rWryC_Bo');
+    Request::session()->set('wechat.id','4');
     return redirect('/');
 });
 /*
