@@ -17,7 +17,7 @@
 <div id="GZ_layer_13" style=" left: 0px; top: 0px;  "><img style="width: 640px; height: 1038px;" src="/assets/images/GZ_layer_13.png"/></div>
 <div id="GZ_DCBJ" style=" left: 63px; top: 114px;  "><img style="width: 529px; height: 809px;" src="/assets/images/GZ_DCBJ.png"/></div>
 <div id="GZ_WenZi" style="width: 460px; height: 766px;  left: 106px; top: 143px; ">
-<img id="myScrollbar" style="width: 438px; height: 1061px; " src='/assets/images/GZ.png'/>
+	<img id="myScrollbar" style="width: 439px; height: 1155px; " src='/assets/images/GZ.png'/>
 </div>
 <div id="GZ_btnX" style=" left: 557px; top: 88px;  "><img style="width: 60px; height: 60px;" src="/assets/images/GZ_btnX.png"/></div>
 <div id="YWL_layer_13" style=" left: 0px; top: 0px;  "><img style="width: 640px; height: 1038px;" src="/assets/images/YWL_layer_13.png"/></div>
