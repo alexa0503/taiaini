@@ -201,7 +201,7 @@ function doSubmit()
 				}
             },
             error: function() {
-				alert('提交失败，请重试~');
+				alert('网页君抽风啦，请再次提交哦～');
             }
         })
 	}
