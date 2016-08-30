@@ -63,19 +63,19 @@
 <div id="share_obj_layer_18_KB_4" style=" left: 481px; top: 326px;  "><img style="width: 35px; height: 36px;" src="/assets/images/share_obj_layer_18_KB_4.png"/></div>
 <div id="share_obj_layer_18_KB_5" style=" left: 431px; top: 344px;  "><img style="width: 21px; height: 22px;" src="/assets/images/share_obj_layer_18_KB_5.png"/></div>
 <div id="share_obj_layer_18_KB_6" style=" left: 520px; top: 173px;  "><img style="width: 21px; height: 22px;" src="/assets/images/share_obj_layer_18_KB_6.png"/></div>
+<div id="END_msk" style=" left: 0px; top: 0px;  "><img style="width: 640px; height: 1038px;" src="/assets/images/WIN_layer_13.png"/></div>
+<div id="END_BG" style=" left: 57px; top: 396px;  "><img style="width: 530px; height: 277px;" src="/assets/images/END_BG.png"/></div>
+<div id="END_btnX" style=" left: 554px; top: 369px;  "><img style="width: 60px; height: 60px;" src="/assets/images/WIN_btnX.png"/></div>
 <script src="/assets/js/WJpreloader.js"></script>
 {{ csrf_field() }}
 @endsection
 @section('scripts')
 <script>
 $(document).ready(function() {
-	@if ($status == 1)
-	showPage("FORM");
-	@elseif ($status == 2)
-	showPage("WIN")
-	@elseif ($status == 3)
-	showPage("YWL");
-	@endif
+	WJclick('END_btnX', function() {
+	    hidePage('END')
+	})
+	showPage('END');
 	$.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
